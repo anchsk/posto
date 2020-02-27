@@ -1,0 +1,46 @@
+
+/*------ VARIABLES ------*/
+
+/*---COLORS---*/
+$bg-color: hsl(31, 100, 95);
+$dark-font-color: hsl(0, 0, 20);
+$light-font-color: hsl(0, 0, 51);
+$alert-color: hsl(0, 79, 63);
+$button-text-color: hsl(100, 100, 100);
+
+/*---FONTS---*/
+$font-family: "Lato", "Roboto", "Arial", sans-serif;
+$very-big-font-size: 2rem;
+$big-font-size: 1.5rem;
+$default-font-size: 1rem;
+$small-font-size: 0.8rem;
+
+/*---Breaking points---*/ 
+$mobile: 375px;
+$desktop: 760px;
+
+$max-width: 700px;
+
+/*---STYLES---*/
+$padding-left-right: 0 24px 0 24px;
+/*
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}*/
+
+body {
+  position: relative;
+  font-family: $font-family;
+  font-size: $default-font-size;
+  font-weight: 400;
+  height: 100vh;
+  height: -moz-available;          
+  height: -webkit-fill-available; 
+  width: 100vw;
+  background-color: $bg-color;
+  line-height: 1.5rem;
+}
