@@ -26,14 +26,15 @@ body {
           justify-content: space-between;
   font-family: "Lato", "Roboto", "Arial", sans-serif;
   color: #333333;
+  background-color: #fff3e6;
 }
 
 header {
   position: absolute;
   display: block;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff3e6), to(rgba(255, 243, 230, 0)));
+  background-image: linear-gradient(to bottom, #fff3e6, rgba(255, 243, 230, 0));
 }
 
 header img {
@@ -195,6 +196,91 @@ footer #links-bottom a {
 }
 
 @media screen and (min-width: 1200px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: "header hero" "opening hero" "footer hero";
+  }
+  header {
+    position: relative;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+    padding: 2rem 2rem 1rem 2rem;
+  }
+  header img {
+    height: 1.8rem;
+  }
+  header p {
+    font-size: medium;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+  }
+  #hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+    grid-area: hero;
+    width: 100%;
+    background: url("/images/photo-1445116572660-236099ec97a0-2.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  #hero img {
+    display: none;
+  }
+  #opening {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: opening;
+    max-width: 80%;
+    padding: 0 3rem 0rem 3rem;
+  }
+  #opening h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0rem;
+  }
+  #opening p {
+    font-size: large;
+  }
+  #opening form {
+    margin-top: 1rem;
+  }
+  #opening form input {
+    height: 2rem;
+    width: 30ch;
+    font-size: small;
+  }
+  #opening form button {
+    margin-left: 0.5rem;
+    height: 2rem;
+    width: 8rem;
+    font-size: small;
+  }
+  footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: footer;
+    font-size: x-small;
+    margin: 3rem 3rem 0 3rem;
+  }
+  footer #social img {
+    height: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  footer #links-bottom {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1900px) {
   body {
     display: -ms-grid;
     display: grid;

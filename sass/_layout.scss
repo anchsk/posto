@@ -5,6 +5,7 @@ body {
   justify-content: space-between;
   font-family: $font-family;
   color: $dark-font-color;
+  background-color: $bg-color;
 }
 header {
   position: absolute;
@@ -170,6 +171,91 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header hero"
+      "opening hero"
+      "footer hero";
+  }
+
+  header {
+    position: relative;
+   grid-area: header;
+   padding: 2rem 2rem 1rem 2rem;
+   img{
+     height: 1.8rem;
+   }
+   p {
+     font-size: medium;
+     padding-top:0.5rem;
+     padding-left: 1rem;
+     padding-bottom: 3rem;
+   }
+  }
+
+  #hero {
+    grid-area: hero;
+    width: 100%;
+    background: url("/images/photo-1445116572660-236099ec97a0-2.jpeg");
+    background-size: cover;
+    background-position: center;
+    img {
+     display: none;
+    }
+  }
+
+  #opening {
+    grid-area: opening;
+    max-width: 80%;
+    padding: 0 3rem 0rem 3rem;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0rem;
+    }
+    p {
+      font-size: large;
+    }
+    form {
+      margin-top: 1rem;
+      input {
+        height: 2rem;
+        width: 30ch;
+        font-size: small;
+      }
+      button {
+        margin-left: 0.5rem;
+        height: 2rem;
+        width:8rem;
+        font-size: small;
+      }
+    }
+  }
+
+  footer {
+   grid-area: footer;
+   font-size: x-small;
+   margin: 3rem 3rem 0 3rem;
+  
+   #social {
+   img {
+     height: 1.5rem;
+     padding-right: 1.5rem;
+     margin-bottom: 1rem;
+   }
+   }
+
+   #links-bottom {
+     margin-top: 2rem;
+   }
+   
+  }
+}
+
+@media screen and (min-width: 1900px) {
   body {
     display: grid;
     grid-template-columns: 50% 50%;
