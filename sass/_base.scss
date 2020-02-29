@@ -1,6 +1,6 @@
 
 /*------ VARIABLES ------*/
-
+$vh: 1vh;
 /*---COLORS---*/
 //$bg-color: hsl(31, 100, 95);
 $bg-color: rgb(255, 255, 255);
@@ -32,17 +32,3 @@ $padding-left-right: 0 24px 0 24px;
   margin: 0;
   box-sizing: border-box;
 }
-/*
-body {
-  position: relative;
-  font-family: $font-family;
-  font-size: $default-font-size;
-  font-weight: 400;
-  height: 100%;
-  height: -moz-available;          
-  height: -webkit-fill-available; 
-  width: 100vw;
-  background-color: $bg-color;
-  line-height: 1.5rem;
-}
-*/

@@ -32,12 +32,13 @@ header {
 
 #opening {
   margin: 1rem;
-  max-width: 40ch;
+  
   h1 {
     font-size: x-large;
     padding-bottom: 1rem;
   }
   p {
+    max-width: 40ch;
     padding-bottom: 1rem;
     font-size: small;
     line-height: 1.5;
@@ -57,16 +58,34 @@ header {
       color: white;
       border: none;
       border-radius: 2px;
+      transition: background-color ease-in 0.3s;
+      //animation: gradient 1s linear 1;
+      //animation-play-state: paused;
+
+
+      &:hover {
+        background-color: rgb(149, 168, 54);
+       // background-image: linear-gradient(to right, white,rgba(255,255,255,0.3));
+        animation-play-state: running;
+        
+      }
     }
   }
 }
+/*
+@keyframes gradient {
+  100% {
+    background-size: cover;
+
+  }
+}*/
 
 footer {
   display: block;
   position: relative;
- // bottom: 0;
+  // bottom: 0;
   font-size: x-small;
-  margin: 1rem;
+  padding: 1rem;
   color: $light-font-color;
   div a {
     margin-right: 1rem;
@@ -93,25 +112,9 @@ footer {
   }
 }
 
-@media screen and (min-width: 800px) {
-  body {
-    display: flex;
-    flex-direction: row;
-  }
-}
 
-@media screen and (max-width: 320px) {
-  #opening {
-    h1 {
-      font-size: medium;
-    }
-    p {
-      line-height: 1.2;
-    }
-  }
-}
 
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 320px) {
   header {
     img {
       height: 1.3rem;
@@ -131,3 +134,114 @@ footer {
     }
   }
 }
+
+@media screen and (min-width: 700px) {
+  body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header hero"
+      "opening hero"
+      "footer hero";
+  }
+
+  header {
+   grid-area: header;
+  }
+
+  #hero {
+    grid-area: hero;
+    background: url("/images/photo-1445116572660-236099ec97a0-2.jpeg");
+    background-size: cover;
+    background-position: center;
+    img {
+     display: none;
+    }
+  }
+
+  #opening {
+    grid-area: opening;
+  }
+
+  footer {
+   grid-area: footer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header hero"
+      "opening hero"
+      "footer hero";
+  }
+
+  header {
+   grid-area: header;
+   padding: 3rem;
+   img{
+     height: 2.5rem;
+   }
+   p {
+     font-size: medium;
+     padding-top:0.5rem;
+     padding-left: 2.1rem;
+   }
+  }
+
+  #hero {
+    grid-area: hero;
+    background: url("/images/photo-1445116572660-236099ec97a0-2.jpeg");
+    background-size: cover;
+    background-position: center;
+    img {
+     display: none;
+    }
+  }
+
+  #opening {
+    grid-area: opening;
+    max-width: 80%;
+    padding: 3rem;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: xx-large;
+    }
+    form {
+      input {
+        height: 3rem;
+        width: 40ch;
+      }
+      button {
+        height: 3rem;
+        width:6rem;
+
+      }
+    }
+  }
+
+  footer {
+   grid-area: footer;
+   font-size: medium;
+   margin: 3rem;
+  
+   #social {
+   img {
+     padding-right: 1rem;
+     margin-bottom: 1rem;
+   }
+   }
+
+   #footer-info {
+     margin-bottom: 1rem;
+   }
+   
+  }
+}
+

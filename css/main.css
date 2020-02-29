@@ -12,20 +12,6 @@
           box-sizing: border-box;
 }
 
-/*
-body {
-  position: relative;
-  font-family: $font-family;
-  font-size: $default-font-size;
-  font-weight: 400;
-  height: 100%;
-  height: -moz-available;          
-  height: -webkit-fill-available; 
-  width: 100vw;
-  background-color: $bg-color;
-  line-height: 1.5rem;
-}
-*/
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,7 +57,6 @@ header p {
 
 #opening {
   margin: 1rem;
-  max-width: 40ch;
 }
 
 #opening h1 {
@@ -80,6 +65,7 @@ header p {
 }
 
 #opening p {
+  max-width: 40ch;
   padding-bottom: 1rem;
   font-size: small;
   line-height: 1.5;
@@ -99,13 +85,28 @@ header p {
   color: white;
   border: none;
   border-radius: 2px;
+  -webkit-transition: background-color ease-in 0.3s;
+  transition: background-color ease-in 0.3s;
 }
 
+#opening form button:hover {
+  background-color: #95a836;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+/*
+@keyframes gradient {
+  100% {
+    background-size: cover;
+
+  }
+}*/
 footer {
   display: block;
   position: relative;
   font-size: x-small;
-  margin: 1rem;
+  padding: 1rem;
   color: #828282;
 }
 
@@ -137,28 +138,7 @@ footer #links-bottom a {
   margin-right: 1rem;
 }
 
-@media screen and (min-width: 800px) {
-  body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  #opening h1 {
-    font-size: medium;
-  }
-  #opening p {
-    line-height: 1.2;
-  }
-}
-
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 320px) {
   header img {
     height: 1.3rem;
     margin: 1.4rem 1.4rem 0.3rem 1.4rem;
@@ -172,6 +152,118 @@ footer #links-bottom a {
   #opening p {
     font-size: large;
     line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: "header hero" "opening hero" "footer hero";
+  }
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+  }
+  #hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+    grid-area: hero;
+    background: url("/images/photo-1445116572660-236099ec97a0-2.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  #hero img {
+    display: none;
+  }
+  #opening {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: opening;
+  }
+  footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: "header hero" "opening hero" "footer hero";
+  }
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+    padding: 3rem;
+  }
+  header img {
+    height: 2.5rem;
+  }
+  header p {
+    font-size: medium;
+    padding-top: 0.5rem;
+    padding-left: 2.1rem;
+  }
+  #hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+    grid-area: hero;
+    background: url("/images/photo-1445116572660-236099ec97a0-2.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  #hero img {
+    display: none;
+  }
+  #opening {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: opening;
+    max-width: 80%;
+    padding: 3rem;
+  }
+  #opening h1 {
+    font-size: 3rem;
+  }
+  #opening p {
+    font-size: xx-large;
+  }
+  #opening form input {
+    height: 3rem;
+    width: 40ch;
+  }
+  #opening form button {
+    height: 3rem;
+    width: 6rem;
+  }
+  footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: footer;
+    font-size: medium;
+    margin: 3rem;
+  }
+  footer #social img {
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  footer #footer-info {
+    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
