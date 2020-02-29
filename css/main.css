@@ -205,6 +205,7 @@ footer #links-bottom a {
         grid-template-areas: "header hero" "opening hero" "footer hero";
   }
   header {
+    position: relative;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: header;
@@ -217,6 +218,7 @@ footer #links-bottom a {
     font-size: medium;
     padding-top: 0.5rem;
     padding-left: 2.1rem;
+    padding-bottom: 1rem;
   }
   #hero {
     -ms-grid-row: 1;
@@ -244,27 +246,34 @@ footer #links-bottom a {
   #opening p {
     font-size: xx-large;
   }
+  #opening form {
+    margin-top: 1rem;
+  }
   #opening form input {
     height: 3rem;
     width: 40ch;
+    font-size: medium;
   }
   #opening form button {
+    margin-left: 0.5rem;
     height: 3rem;
-    width: 6rem;
+    width: 8rem;
+    font-size: large;
   }
   footer {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: footer;
     font-size: medium;
-    margin: 3rem;
+    margin: 3rem 3rem 0 3rem;
   }
   footer #social img {
-    padding-right: 1rem;
+    height: 2rem;
+    padding-right: 1.5rem;
     margin-bottom: 1rem;
   }
-  footer #footer-info {
-    margin-bottom: 1rem;
+  footer #links-bottom {
+    margin-top: 2rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
