@@ -33,7 +33,7 @@ header {
 
 #opening {
   margin: 1rem;
-  
+
   h1 {
     font-size: x-large;
     padding-bottom: 1rem;
@@ -63,12 +63,10 @@ header {
       //animation: gradient 1s linear 1;
       //animation-play-state: paused;
 
-
       &:hover {
         background-color: rgb(149, 168, 54);
-       // background-image: linear-gradient(to right, white,rgba(255,255,255,0.3));
+        // background-image: linear-gradient(to right, white,rgba(255,255,255,0.3));
         animation-play-state: running;
-        
       }
     }
   }
@@ -113,8 +111,6 @@ footer {
   }
 }
 
-
-
 @media screen and (min-width: 320px) {
   header {
     img {
@@ -148,7 +144,7 @@ footer {
   }
 
   header {
-   grid-area: header;
+    grid-area: header;
   }
 
   #hero {
@@ -157,7 +153,7 @@ footer {
     background-size: cover;
     background-position: center;
     img {
-     display: none;
+      display: none;
     }
   }
 
@@ -166,7 +162,7 @@ footer {
   }
 
   footer {
-   grid-area: footer;
+    grid-area: footer;
   }
 }
 
@@ -183,17 +179,17 @@ footer {
 
   header {
     position: relative;
-   grid-area: header;
-   padding: 2rem 2rem 1rem 2rem;
-   img{
-     height: 1.8rem;
-   }
-   p {
-     font-size: medium;
-     padding-top:0.5rem;
-     padding-left: 1rem;
-     padding-bottom: 3rem;
-   }
+    grid-area: header;
+    padding: 2rem 2rem 1rem 2rem;
+    img {
+      height: 2rem;
+    }
+    p {
+      font-size: medium;
+      padding-top: 0.5rem;
+      padding-left: 1.3rem;
+      padding-bottom: 3rem;
+    }
   }
 
   #hero {
@@ -203,7 +199,7 @@ footer {
     background-size: cover;
     background-position: center;
     img {
-     display: none;
+      display: none;
     }
   }
 
@@ -212,46 +208,50 @@ footer {
     max-width: 80%;
     padding: 0 3rem 0rem 3rem;
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
       margin-top: 0rem;
     }
     p {
-      font-size: large;
+      font-size: x-large;
     }
     form {
-      margin-top: 1rem;
+      margin-top: 2rem;
       input {
-        height: 2rem;
+        height: 3rem;
         width: 30ch;
-        font-size: small;
+        font-size: medium;
       }
       button {
         margin-left: 0.5rem;
-        height: 2rem;
-        width:8rem;
-        font-size: small;
+        height: 3rem;
+        width: 8rem;
+        font-size: medium;
       }
     }
   }
 
   footer {
-   grid-area: footer;
-   font-size: x-small;
-   margin: 3rem 3rem 0 3rem;
-  
-   #social {
-   img {
-     height: 1.5rem;
-     padding-right: 1.5rem;
-     margin-bottom: 1rem;
-   }
-   }
+    grid-area: footer;
+    font-size: medium;
+    margin: 3rem 3rem 0 3rem;
 
-   #links-bottom {
-     margin-top: 2rem;
-   }
-   
+    #social {
+      img {
+        height: 2rem;
+        padding-right: 1.5rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    #footer-info {
+      margin-top: 0;
+      margin-bottom: 3rem;
+    }
+
+    #links-bottom {
+      margin-top: 0rem;
+    }
   }
 }
 
@@ -268,17 +268,17 @@ footer {
 
   header {
     position: relative;
-   grid-area: header;
-   padding: 3rem;
-   img{
-     height: 2.5rem;
-   }
-   p {
-     font-size: medium;
-     padding-top:0.5rem;
-     padding-left: 2.1rem;
-     padding-bottom: 1rem;
-   }
+    grid-area: header;
+    padding: 3rem;
+    img {
+      height: 2.5rem;
+    }
+    p {
+      font-size: medium;
+      padding-top: 0.5rem;
+      padding-left: 2.1rem;
+      padding-bottom: 1rem;
+    }
   }
 
   #hero {
@@ -288,7 +288,7 @@ footer {
     background-size: cover;
     background-position: center;
     img {
-     display: none;
+      display: none;
     }
   }
 
@@ -312,29 +312,27 @@ footer {
       button {
         margin-left: 0.5rem;
         height: 3rem;
-        width:8rem;
+        width: 8rem;
         font-size: large;
       }
     }
   }
 
   footer {
-   grid-area: footer;
-   font-size: medium;
-   margin: 3rem 3rem 0 3rem;
-  
-   #social {
-   img {
-     height: 2rem;
-     padding-right: 1.5rem;
-     margin-bottom: 1rem;
-   }
-   }
+    grid-area: footer;
+    font-size: medium;
+    margin: 3rem 3rem 0 3rem;
 
-   #links-bottom {
-     margin-top: 2rem;
-   }
-   
+    #social {
+      img {
+        height: 2rem;
+        padding-right: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    #links-bottom {
+      margin-top: 2rem;
+    }
   }
 }
-
