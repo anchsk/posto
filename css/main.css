@@ -92,17 +92,8 @@ header p {
 
 #opening form button:hover {
   background-color: #95a836;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
 }
 
-/*
-@keyframes gradient {
-  100% {
-    background-size: cover;
-
-  }
-}*/
 footer {
   display: block;
   position: relative;
