@@ -33,8 +33,6 @@ header {
   position: absolute;
   display: block;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff3e6), to(rgba(255, 243, 230, 0)));
-  background-image: linear-gradient(to bottom, #fff3e6, rgba(255, 243, 230, 0));
 }
 
 header img {
