@@ -11,8 +11,9 @@ header {
   position: absolute;
   display: block;
   width: 100%;
- // background-image: linear-gradient(to bottom, $bg-color, rgba($bg-color, 0));
-  background-color: $bg-color;
+  // background-image: linear-gradient(to bottom, $bg-color, rgba($bg-color, 0));
+  /* background-color: $bg-color; */
+  background-color: none;
 
   img {
     margin: 1.2rem 1rem 0.2rem 1rem;
@@ -62,7 +63,6 @@ header {
       border: none;
       border-radius: 2px;
       transition: background-color ease-in 0.3s;
-      
 
       &:hover {
         background-color: rgb(149, 168, 54);
@@ -70,7 +70,6 @@ header {
     }
   }
 }
-
 
 footer {
   display: block;
@@ -98,13 +97,13 @@ footer {
     a {
       color: $light-font-color;
       margin-right: 1rem;
-      
     }
   }
 }
 
 @media screen and (min-width: 320px) {
   header {
+    background-color: $bg-color;
     img {
       height: 1.3rem;
       margin: 1.4rem 1.4rem 0.3rem 1.4rem;
@@ -137,6 +136,7 @@ footer {
 
   header {
     grid-area: header;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   #hero {
@@ -173,6 +173,7 @@ footer {
     position: relative;
     grid-area: header;
     padding: 2rem 2rem 1rem 2rem;
+    background-color: none;
     img {
       height: 2rem;
     }
@@ -262,6 +263,8 @@ footer {
     position: relative;
     grid-area: header;
     padding: 3rem;
+    background-color: none;
+
     img {
       height: 2.5rem;
     }
